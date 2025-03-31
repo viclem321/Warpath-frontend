@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Warpath_frontend.Views.VillagePage"
+             x:Class="Warpath_frontend.Views.VillagePage.Components.CaserneView"
+             x:DataType="local:VillageViewModel">
+
+
+
+    <VerticalStackLayout>
+        
+        <VerticalStackLayout x:Name="SectionIfTroopArentTraining" Spacing="20">
+            <Label Text="Send troops to training" HorizontalTextAlignment="Center" FontSize="17" TextColor="White"/>
+            <Entry x:Name="entryNTroopsToTrain" Placeholder="Nombre de troupes..." TextColor="White" Keyboard="Numeric" />
+            <Button Text="Entrainer" Clicked="Train_Clicked" BackgroundColor="#228B22" WidthRequest="150"/>
+        </VerticalStackLayout>
+        
+        <VerticalStackLayout x:Name="SectionIfTroopTraining" Spacing="20">
+            <VerticalStackLayout x:Name="ifEndTraining" Spacing="15">
+                <Label x:Name="labelEndTraining" Text="" HorizontalTextAlignment="Center" FontSize="17" TextColor="White"/>
+                <Button Text="Terminer l'entrainement" Clicked="EndTraining_Clicked" BackgroundColor="#228B22" WidthRequest="200"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout x:Name="ifNotEndTraining" Spacing="15">
+                <Label x:Name="LabelIfNotEndTraining" Text="" FontSize="17" HorizontalTextAlignment="Center" TextColor="White"/>
+                <Label x:Name="LabelIfNotEndTrainingTimer" Text="" FontSize="19" HorizontalTextAlignment="Center" TextColor="White"/>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+        
+    </VerticalStackLayout>
+
+
+</ContentView>

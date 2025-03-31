@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Warpath_frontend.Views.PlayerPage"
+             x:Class="Warpath_frontend.Views.PlayerPage.PlayerPage"
+             x:DataType="{x:Type local:PlayerViewModel}"
+             Title="Player Page">
+
+    
+        <Grid>
+
+            <Image Source="bgimage.jpg" Aspect="Fill"></Image>
+
+            <ScrollView>
+
+            <VerticalStackLayout VerticalOptions="Center">
+
+                <Border x:Name="border1" Margin="30" Stroke="#B8860B" StrokeThickness="3" BackgroundColor="#2E3B32" Padding="20" StrokeShape="RoundRectangle 15" VerticalOptions="Center" HorizontalOptions="Center">
+
+
+                    <VerticalStackLayout>
+
+
+                        <VerticalStackLayout>
+
+                            <Label x:Name="TitlePage" Text="Your Player Page" FontSize="{OnPlatform iOS=24, Android=24, WinUI=27}" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center" />
+
+                        </VerticalStackLayout>
+
+
+                        <Border Margin="0, 40, 0, 0" Padding="10" Stroke="DarkSlateGrey" BackgroundColor="#FF3B3B3B" StrokeThickness="1" StrokeShape="RoundRectangle 6">
+                            <VerticalStackLayout Padding="30">
+
+                                <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                                    <Label Text="Liste de tous vos villages:" FontAttributes="Bold" FontSize="{OnPlatform iOS=16, Android=16, WinUI=19}" TextColor="White" HorizontalOptions="Center" />
+                                    <Label Text="{Binding VillagesLocationText}" FontSize="{OnPlatform iOS=15, Android=15, WinUI=19}" TextColor="White" HorizontalOptions="Center" />
+                                </HorizontalStackLayout>
+
+                                <Entry Text="{Binding UserVillageChoice, Mode=TwoWay}" Placeholder="Entrer une location..." TextColor="White" Keyboard="Numeric" Margin="0,15,0,0" />
+
+                                <Button Text="Entrer dans le village!" Command="{Binding EnterInVillageCommand}" Margin="0,15,0,0" />
+
+                            </VerticalStackLayout>
+                        </Border>
+
+
+                        <Border Margin="0, 20, 0, 0" Padding="10" Stroke="DarkSlateGrey" BackgroundColor="#FF3B3B3B" StrokeThickness="1" StrokeShape="RoundRectangle 6">
+                            <VerticalStackLayout Padding="30">
+
+
+                                <Label Text="Here you can create a new Village:" FontAttributes="Bold" FontSize="{OnPlatform iOS=16, Android=16, WinUI=18}" TextColor="White" HorizontalOptions="Center" />
+
+                                <Entry Text="{Binding NewVillageChoice, Mode=TwoWay}" Placeholder="Entrer une location..." TextColor="White" Keyboard="Numeric" Margin="0,15,0,0" />
+
+                                <Button Text="Create a new Village!" Command="{Binding CreateNewVillageCommand}" Margin="0,15,0,0" />
+                            </VerticalStackLayout>
+                        </Border>
+
+
+
+                    </VerticalStackLayout>
+
+
+                </Border>
+
+            </VerticalStackLayout>
+
+        </ScrollView>
+
+
+        </Grid>
+
+
+
+
+
+
+
+
+
+</ContentPage>

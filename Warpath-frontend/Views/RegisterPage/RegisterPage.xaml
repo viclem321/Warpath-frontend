@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Warpath_frontend.Views.RegisterPage.RegisterPage"
+             Title="Inscription">
+
+
+
+
+    <Grid>
+
+
+        <Image Source="bgimage.jpg" Aspect="Fill" ZIndex="-1"></Image>
+
+        <ScrollView>
+            <VerticalStackLayout VerticalOptions="Center">
+
+                <Border x:Name="border" Stroke="#B8860B" StrokeThickness="3" BackgroundColor="#2E3B32" Padding="20" StrokeShape="RoundRectangle 15" VerticalOptions="Center" HorizontalOptions="Center">
+
+                    <VerticalStackLayout Spacing="10">
+                        <Label Text="Creer un compte"  FontSize="27" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
+
+                        <Entry x:Name="entryUsername" Placeholder="Email" TextColor="White" Keyboard="Email"/>
+                        <Entry x:Name="entryPassword" Placeholder="Mot de passe" TextColor="White" IsPassword="True"/>
+
+                        <Button Text="S'inscrire" Clicked="OnRegisterClicked"/>
+
+                        <Label x:Name="labelMessage" Text="" TextColor="Green" HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+
+
+                </Border>
+
+            </VerticalStackLayout>
+
+        </ScrollView>
+
+
+    </Grid>
+
+
+
+
+</ContentPage>

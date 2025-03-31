@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warpath-frontend", "Warpath-frontend\Warpath-frontend.csproj", "{7893B133-0909-4AE0-B470-2B82E26FC72A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warpath.Shared", "..\Warpath.Shared\Warpath.Shared.csproj", "{0450FBF0-3A5B-C19C-DC63-A86E7D9EE8B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7893B133-0909-4AE0-B470-2B82E26FC72A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7893B133-0909-4AE0-B470-2B82E26FC72A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7893B133-0909-4AE0-B470-2B82E26FC72A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7893B133-0909-4AE0-B470-2B82E26FC72A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0450FBF0-3A5B-C19C-DC63-A86E7D9EE8B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0450FBF0-3A5B-C19C-DC63-A86E7D9EE8B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0450FBF0-3A5B-C19C-DC63-A86E7D9EE8B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0450FBF0-3A5B-C19C-DC63-A86E7D9EE8B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {69B0D39D-2FFA-4845-B156-98AC3FAAD1D2}
+	EndGlobalSection
+EndGlobal

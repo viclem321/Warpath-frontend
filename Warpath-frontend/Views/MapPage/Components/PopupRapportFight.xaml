@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup
+    
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Warpath_frontend.Views.MapPage"
+    xmlns:catalogue="clr-namespace:Warpath.Shared.Catalogue;assembly=Warpath.Shared"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    x:Class="Warpath_frontend.Views.MapPage.Components.PopupRapportFight"
+    x:DataType="local:MapViewModel"
+    HorizontalOptions="Center"
+    VerticalOptions="Center"
+    Color="Transparent">
+
+    <StackLayout>
+        <Border Stroke="#B8860B" StrokeThickness="3" BackgroundColor="#2E3B32" Padding="25" StrokeShape="RoundRectangle 15" >
+            <Grid>
+
+                <VerticalStackLayout VerticalOptions="Start" Spacing="15">
+
+
+                    <Label Text="Rapport de combat" FontSize="{OnPlatform Android=22, iOS=22, WinUI=24}" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center" Margin="0, 0, 0, 21"/>
+                        
+                    <HorizontalStackLayout>
+                        <Label Text="Attaquant : " FontSize="{OnPlatform Android=12, iOS=12, WinUI=18}" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
+                        <Label x:Name="labelAttaquant" Text="" FontSize="{OnPlatform Android=12, iOS=12, WinUI=18}" TextColor="White" HorizontalOptions="Center"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Nombre de soldats de l'attaquant : " FontSize="{OnPlatform Android=12, iOS=12, WinUI=18}" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
+                        <Label x:Name="labelAttaquantNSoldats" Text="" FontSize="{OnPlatform Android=12, iOS=12, WinUI=18}" TextColor="White" HorizontalOptions="Center"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Nombre de soldats de l'attaquant survivant : " FontSize="{OnPlatform Android=12, iOS=12, WinUI=18}" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
+                        <Label x:Name="labelAttaquantNSoldatsSurvived" Text="" FontSize="{OnPlatform Android=12, iOS=12, WinUI=18}" TextColor="White" HorizontalOptions="Center"/>
+                    </HorizontalStackLayout>
+
+
+                    <HorizontalStackLayout Margin="0, 10, 0, 0">
+                        <Label Text="Defenseur : " FontSize="{OnPlatform Android=12, iOS=12, WinUI=18}" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
+                        <Label x:Name="labelDefenseur" Text="" FontSize="{OnPlatform Android=12, iOS=12, WinUI=18}" TextColor="White" HorizontalOptions="Center"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Nombre de soldats du defenseur : " FontSize="{OnPlatform Android=12, iOS=12, WinUI=18}" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
+                        <Label x:Name="labelDefenseurNSoldats" Text="" FontSize="{OnPlatform Android=12, iOS=12, WinUI=18}" TextColor="White" HorizontalOptions="Center"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Nombre de soldats du defenseur survivant : " FontSize="{OnPlatform Android=12, iOS=12, WinUI=18}" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
+                        <Label x:Name="labelDefenseurNSoldatsSurvived" Text="" FontSize="{OnPlatform Android=12, iOS=12, WinUI=18}" TextColor="White" HorizontalOptions="Center"/>
+                    </HorizontalStackLayout>
+
+                    <Label x:Name="labelWinner" Text="" FontSize="{OnPlatform Android=16, iOS=16, WinUI=21}" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center" Margin="0, 18, 0, 0"/>
+
+                    <Button Text="Fermer le rapport" BackgroundColor="#80000000" Clicked="OnCloseButtonClicked" Margin="0, 30, 0, 0" />
+                    
+                    
+                </VerticalStackLayout>
+
+            </Grid>
+
+        </Border>
+    </StackLayout>
+
+
+</toolkit:Popup>

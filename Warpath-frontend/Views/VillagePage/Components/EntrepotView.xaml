@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Warpath_frontend.Views.VillagePage"
+             x:Class="Warpath_frontend.Views.VillagePage.Components.EntrepotView"
+             x:DataType="local:VillageViewModel">
+
+
+
+    <VerticalStackLayout Spacing="10">
+        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+            <Image Source="woodicone.png" WidthRequest="20" HeightRequest="20"  VerticalOptions="Start"></Image>
+            <Label x:Name="LabelStockBois" TextColor="White" HorizontalTextAlignment="Center" Text=""/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+            <Image Source="foodicone2.png" WidthRequest="20" HeightRequest="20"  VerticalOptions="Start"></Image>
+            <Label x:Name="LabelStockAliments" TextColor="White" HorizontalTextAlignment="Center" Text=""/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+            <Image Source="fericone.png" WidthRequest="20" HeightRequest="20"  VerticalOptions="Start"></Image>
+            <Label x:Name="LabelStockPetrole" TextColor="White" HorizontalTextAlignment="Center" Text=""/>
+        </HorizontalStackLayout>
+        <Label x:Name="LabelCapacityAmount" TextColor="White" HorizontalTextAlignment="Center" Text=""/>
+    </VerticalStackLayout>
+
+
+</ContentView>

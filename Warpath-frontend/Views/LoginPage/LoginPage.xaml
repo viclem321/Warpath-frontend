@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Warpath_frontend.Views.LoginPage.LoginPage"
+             Title="Connexion">
+
+    <Grid>
+
+        <Image Source="bgimage.jpg" Aspect="Fill" ZIndex="-1"></Image>
+
+        <ScrollView >
+            <VerticalStackLayout VerticalOptions="Center">
+
+                <Border x:Name="border" Stroke="#B8860B" StrokeThickness="3" BackgroundColor="#2E3B32" Padding="20" StrokeShape="RoundRectangle 15" VerticalOptions="Center" HorizontalOptions="Center" >
+                    <VerticalStackLayout Spacing="10">
+                        <Label Text="Connexion" FontSize="27" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center" />
+                        <Entry x:Name="entryUsername" TextColor="White" HorizontalOptions="Center" Placeholder="Nom d'utilisateur" />
+                        <Entry x:Name="entryPassword" TextColor="White" HorizontalOptions="Center" Placeholder="Mot de passe" IsPassword="True" />
+                        <Button Text="Se connecter" Clicked="OnLoginClicked" />
+                        <Button Text="Creer un compte" Clicked="OnRegisterClicked" />
+                    </VerticalStackLayout>
+                </Border>
+
+            </VerticalStackLayout>
+
+        </ScrollView>
+
+    </Grid>
+
+
+
+
+</ContentPage>

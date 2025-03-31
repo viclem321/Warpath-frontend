@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup
+    
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Warpath_frontend.Views.VillagePage"
+    xmlns:catalogue="clr-namespace:Warpath.Shared.Catalogue;assembly=Warpath.Shared"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    x:Class="Warpath_frontend.Views.VillagePage.Components.PopupBuilding"
+    x:DataType="local:VillageViewModel"
+    HorizontalOptions="Center"
+    VerticalOptions="Center"
+    Color="Transparent">
+
+    <StackLayout>
+
+        <Border x:Name="Testtt" Stroke="#B8860B" StrokeThickness="3" BackgroundColor="#2E3B32" Padding="20" StrokeShape="RoundRectangle 15" WidthRequest="320" >
+            <VerticalStackLayout Spacing="10">
+                <Label x:Name="nameBuilding" Text="" FontSize="22" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
+                <Label x:Name="levelBuilding" Text="" FontSize="18" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
+                <Border Margin="0, 20, 0, 30" Padding="15" Stroke="DarkSlateGrey" BackgroundColor="#FF3B3B3B" StrokeThickness="1" StrokeShape="RoundRectangle 6">
+                    <ContentView>
+                        <ContentView.Content>
+                            <ContentView x:Name="BuildingContent"/>
+                        </ContentView.Content>
+                    </ContentView>
+                </Border>
+                <Button Text="Upgrade" BackgroundColor="#8FBC8F" CornerRadius="5" Clicked="Button_Upgrade_Clicked" />
+                <Button Text="Close" BackgroundColor="#80000000" Clicked="OnCloseButtonClicked" />
+            </VerticalStackLayout>
+        </Border>
+        
+        
+    </StackLayout>
+
+    
+
+</toolkit:Popup>

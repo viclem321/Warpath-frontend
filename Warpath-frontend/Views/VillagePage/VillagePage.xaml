@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Warpath_frontend.Views.VillagePage"
+             xmlns:models="clr-namespace:Warpath_frontend.Views.VillagePage.Models"
+             xmlns:converters="clr-namespace:Warpath_frontend.Views.VillagePage.Converter"
+             xmlns:converterGlobal="clr-namespace:Warpath_frontend.Converters"
+             xmlns:catalogue="clr-namespace:Warpath.Shared.Catalogue;assembly=Warpath.Shared"
+             x:Class="Warpath_frontend.Views.VillagePage.VillagePage"
+             x:DataType="local:VillageViewModel"
+             Title="Village"
+             InputTransparent="{Binding IsLoading}">
+
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:BuildingImageConverter x:Key="BuildingImageConverter"/>
+            <converterGlobal:BoolInverterConverter x:Key="BoolInverterConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <AbsoluteLayout>
+
+
+        <ScrollView Orientation="Both" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Green">
+            
+
+            <Grid x:Name="VillageGrid" RowSpacing="10" ColumnSpacing="10">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="135"/>
+                    <RowDefinition Height="135"/>
+                    <RowDefinition Height="135"/>
+                    <RowDefinition Height="135"/>
+                    <RowDefinition Height="135"/>
+                    <RowDefinition Height="135"/>
+                    <RowDefinition Height="135"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="135"/>
+                    <ColumnDefinition Width="135"/>
+                    <ColumnDefinition Width="135"/>
+                    <ColumnDefinition Width="135"/>
+                    <ColumnDefinition Width="135"/>
+                    <ColumnDefinition Width="135"/>
+                    <ColumnDefinition Width="135"/>
+                    <ColumnDefinition Width="135"/>
+                    <ColumnDefinition Width="135"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="background_village.png" Grid.RowSpan="15" Grid.ColumnSpan="15" Aspect="Fill" Opacity="0.9" />
+
+
+                <Border Grid.Row="1" Grid.Column="4" Stroke="Black" StrokeThickness="0" Padding="0">
+                    <StackLayout>
+                        <Label Text="QG" FontSize="14" HorizontalOptions="Center" />
+                        <Label Text="{Binding Village.Buildings[0].Level}" FontSize="12" HorizontalOptions="Center" Margin="0,0,0,2" />
+                        <ImageButton Source="{Binding Village.Buildings[0].Level, Converter={StaticResource BuildingImageConverter}, ConverterParameter={x:Static catalogue:BuildingType.Hq}}" BackgroundColor="Transparent" Command="{Binding OpenBuildingPopupCommand}" CommandParameter="{x:Static catalogue:BuildingType.Hq}" />
+                    </StackLayout>
+                </Border>
+
+                <Border Grid.Row="2" Grid.Column="2" Stroke="Black" StrokeThickness="0" Padding="0">
+                    <StackLayout>
+                        <Label Text="Scierie" FontSize="14" HorizontalOptions="Center" />
+                        <Label Text="{Binding Village.Buildings[1].Level}" FontSize="12" HorizontalOptions="Center" Margin="0,0,0,2" />
+                        <ImageButton Source="{Binding Village.Buildings[1].Level, Converter={StaticResource BuildingImageConverter}, ConverterParameter={x:Static catalogue:BuildingType.Scierie}}" BackgroundColor="Transparent" Command="{Binding OpenBuildingPopupCommand}" CommandParameter="{x:Static catalogue:BuildingType.Scierie}" />
+                    </StackLayout>
+                </Border>
+
+                <Border Grid.Row="4" Grid.Column="6" Stroke="Black" StrokeThickness="0" Padding="0">
+                    <StackLayout>
+                        <Label Text="Ferme" FontSize="14" HorizontalOptions="Center" />
+                        <Label Text="{Binding Village.Buildings[2].Level}" FontSize="12" HorizontalOptions="Center" Margin="0,0,0,2" />
+                        <ImageButton Source="{Binding Village.Buildings[2].Level, Converter={StaticResource BuildingImageConverter}, ConverterParameter={x:Static catalogue:BuildingType.Ferme}}" BackgroundColor="Transparent" Command="{Binding OpenBuildingPopupCommand}" CommandParameter="{x:Static catalogue:BuildingType.Ferme}" />
+                    </StackLayout>
+                </Border>
+
+                <Border Grid.Row="3" Grid.Column="2" Stroke="Black" StrokeThickness="0" Padding="0">
+                    <StackLayout>
+                        <Label Text="Mine" FontSize="14" HorizontalOptions="Center" />
+                        <Label Text="{Binding Village.Buildings[3].Level}" FontSize="12" HorizontalOptions="Center" Margin="0,0,0,2" />
+                        <ImageButton Source="{Binding Village.Buildings[3].Level, Converter={StaticResource BuildingImageConverter}, ConverterParameter={x:Static catalogue:BuildingType.Mine}}" BackgroundColor="Transparent" Command="{Binding OpenBuildingPopupCommand}" CommandParameter="{x:Static catalogue:BuildingType.Mine}" />
+                    </StackLayout>
+                </Border>
+
+                <Border Grid.Row="4" Grid.Column="4" Stroke="Black" StrokeThickness="0" Padding="0">
+                    <StackLayout>
+                        <Label Text="Entrepot" FontSize="14" HorizontalOptions="Center" />
+                        <Label Text="{Binding Village.Buildings[4].Level}" FontSize="12" HorizontalOptions="Center" Margin="0,0,0,2" />
+                        <ImageButton Source="{Binding Village.Buildings[4].Level, Converter={StaticResource BuildingImageConverter}, ConverterParameter={x:Static catalogue:BuildingType.Entrepot}}" BackgroundColor="Transparent" Command="{Binding OpenBuildingPopupCommand}" CommandParameter="{x:Static catalogue:BuildingType.Entrepot}" />
+                    </StackLayout>
+                </Border>
+
+                <Border Grid.Row="2" Grid.Column="5" Stroke="Black" StrokeThickness="0" Padding="0">
+                    <StackLayout>
+                        <Label Text="Camp Militaire" FontSize="14" HorizontalOptions="Center" />
+                        <Label Text="{Binding Village.Buildings[5].Level}" FontSize="12" HorizontalOptions="Center" Margin="0,0,0,2" />
+                        <ImageButton Source="{Binding Village.Buildings[5].Level, Converter={StaticResource BuildingImageConverter}, ConverterParameter={x:Static catalogue:BuildingType.CampMilitaire}}" BackgroundColor="Transparent" Command="{Binding OpenBuildingPopupCommand}" CommandParameter="{x:Static catalogue:BuildingType.CampMilitaire}" />
+                    </StackLayout>
+                </Border>
+
+                <Border Grid.Row="2" Grid.Column="6" Stroke="Black" StrokeThickness="0" Padding="0">
+                    <StackLayout>
+                        <Label Text="Caserne" FontSize="14" HorizontalOptions="Center" />
+                        <Label Text="{Binding Village.Buildings[6].Level}" FontSize="12" HorizontalOptions="Center" Margin="0,0,0,2" />
+                        <ImageButton Source="{Binding Village.Buildings[6].Level, Converter={StaticResource BuildingImageConverter}, ConverterParameter={x:Static catalogue:BuildingType.Caserne}}" BackgroundColor="Transparent" Command="{Binding OpenBuildingPopupCommand}" CommandParameter="{x:Static catalogue:BuildingType.Caserne}" />
+                    </StackLayout>
+                </Border>
+
+            </Grid>
+
+        </ScrollView>
+
+
+        <VerticalStackLayout AbsoluteLayout.LayoutBounds="0.5,0.02,600,50" AbsoluteLayout.LayoutFlags="PositionProportional">
+            <Border Stroke="LightGray" StrokeThickness="2" BackgroundColor="Black" StrokeShape="RoundRectangle 9" HorizontalOptions="Center" Padding="15, 4, 15, 4">
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
+                    <HorizontalStackLayout HorizontalOptions="Start">
+                        <Image Source="woodicone.png" WidthRequest="20" HeightRequest="20"  VerticalOptions="Start"></Image>
+                        <Label Text="{Binding WoodAmount}" TextColor="White"></Label>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout HorizontalOptions="Center">
+                        <Image Source="foodicone2.png" WidthRequest="20" HeightRequest="20"  VerticalOptions="Start"></Image>
+                        <Label Text="{Binding FoodAmount}" TextColor="White"></Label>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout HorizontalOptions="End">
+                        <Image Source="fericone.png" WidthRequest="20" HeightRequest="20"  VerticalOptions="Start"></Image>
+                        <Label Text="{Binding OilAmount}" TextColor="White"></Label>
+                    </HorizontalStackLayout>
+                </HorizontalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+
+
+        <StackLayout BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0.98,0.11,200,200" AbsoluteLayout.LayoutFlags="PositionProportional">
+            <Border Stroke="Black" StrokeThickness="2" BackgroundColor="Beige" Padding="10">
+                <StackLayout Spacing="10">
+                    <Label Text="Liste de Construction" FontSize="17" FontAttributes="Bold" HorizontalOptions="Center" />
+                    <StackLayout IsVisible="{Binding Village.UpgradeAction1.Active, Converter={StaticResource BoolInverterConverter}}">
+                        <Label Text="Il n'y a aucun batiment en construction." FontSize="12" HorizontalOptions="Center" />
+                    </StackLayout>
+                    <StackLayout IsVisible="{Binding Village.UpgradeAction1.Active}">
+                        <StackLayout IsVisible="{Binding Village.UpgradeAction1.Finish}">
+                            <Label Text="{Binding Village.UpgradeAction1.BuildingType, StringFormat='Le batiment {0} a finit sa construction'}" FontSize="12" HorizontalOptions="Center" />
+                            <Button Text="Terminer l'upgrade" Command="{Binding EndUpgradeAction1Command}" />
+                        </StackLayout>
+                        <StackLayout IsVisible="{Binding Village.UpgradeAction1.Finish, Converter={StaticResource BoolInverterConverter}}">
+                            <Label Text="{Binding Village.UpgradeAction1.BuildingType, StringFormat='Le batiment {0} est en cours de construction'}" FontSize="14" HorizontalOptions="Center" />
+                            <Label Text="{Binding Village.UpgradeAction1.TimeRemaining}" FontSize="18" HorizontalOptions="Center" />
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </Border>
+        </StackLayout>
+        
+        <StackLayout BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0.5,0.98,170,50" AbsoluteLayout.LayoutFlags="PositionProportional">
+            <Button Text="Ouvrir la map" Command="{Binding GoToMapCommand}" />
+        </StackLayout>
+
+
+        <Grid AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Black" Opacity="0.5"  IsVisible="{Binding IsLoading}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <ActivityIndicator IsRunning="True" VerticalOptions="Center" HorizontalOptions="Center" Color="White"/>
+        </Grid>
+
+
+
+
+    </AbsoluteLayout>
+
+
+</ContentPage>

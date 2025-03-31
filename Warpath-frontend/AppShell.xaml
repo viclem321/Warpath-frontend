@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Warpath_frontend.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Warpath_frontend"
+    xmlns:viewsLoadingPage="clr-namespace:Warpath_frontend.Views.LoadingPage"
+    xmlns:viewsLoginPage="clr-namespace:Warpath_frontend.Views.LoginPage"
+    xmlns:viewsRegisterPage="clr-namespace:Warpath_frontend.Views.RegisterPage"
+    xmlns:viewsPlayerPage="clr-namespace:Warpath_frontend.Views.PlayerPage"
+    xmlns:viewsVillagePage="clr-namespace:Warpath_frontend.Views.VillagePage"
+    xmlns:viewsMapPage="clr-namespace:Warpath_frontend.Views.MapPage"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="False"
+    Title="Warpath_frontend">
+
+    <ShellContent Title="Loading Page" ContentTemplate="{DataTemplate viewsLoadingPage:LoadingPage}" Route="LoadingPage" />
+    <ShellContent Title="Login Page" ContentTemplate="{DataTemplate viewsLoginPage:LoginPage}" Route="LoginPage" />
+    <ShellContent Title="Register Page" ContentTemplate="{DataTemplate viewsRegisterPage:RegisterPage}" Route="RegisterPage" />
+    <ShellContent Title="Player Page" ContentTemplate="{DataTemplate viewsPlayerPage:PlayerPage}" Route="PlayerPage" />
+    <ShellContent Title="Village Page" ContentTemplate="{DataTemplate viewsVillagePage:VillagePage}" Route="VillagePage" />
+    <ShellContent Title="Map Page" ContentTemplate="{DataTemplate viewsMapPage:MapPage}" Route="MapPage" />
+
+</Shell>

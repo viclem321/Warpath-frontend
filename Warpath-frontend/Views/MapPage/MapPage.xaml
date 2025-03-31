@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:catalogue="clr-namespace:Warpath.Shared.Catalogue;assembly=Warpath.Shared"
+             xmlns:local="clr-namespace:Warpath_frontend.Views.MapPage"
+             xmlns:converters="clr-namespace:Warpath_frontend.Views.MapPage.Converter"
+             xmlns:models="clr-namespace:Warpath_frontend.Views.MapPage.Models"
+             x:Class="Warpath_frontend.Views.MapPage.MapPage"
+             x:DataType="local:MapViewModel"
+             Title="MapPage"
+             BackgroundColor="LightBlue">
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:MapTileImageConverter x:Key="MapTileImageConverter"/>
+            <converters:MapTileOwnerExistConverter x:Key="MapTileOwnerExistConverter"/>
+            <converters:MapTileOwnerColorConverter x:Key="MapTileOwnerColorConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <AbsoluteLayout InputTransparent="{Binding IsLoading}">
+
+        <ScrollView Orientation="Both" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+
+            <Grid>
+
+                <CollectionView ItemsSource="{Binding Map.MapTiles}" WidthRequest="{Binding DimensionsGrid}" HeightRequest="{Binding DimensionsGrid}" ItemSizingStrategy="MeasureAllItems">
+
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Span="14" Orientation="Vertical" />
+                    </CollectionView.ItemsLayout>
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:MapTilePageModel">
+                            <Border Opacity="0.5" Stroke="Yellow" StrokeThickness="0" Margin="0" Padding="0" WidthRequest="{Binding Source={RelativeSource AncestorType={x:Type local:MapViewModel}}, Path=DimensionsCase}" HeightRequest="{Binding Source={RelativeSource AncestorType={x:Type local:MapViewModel}}, Path=DimensionsCase}">
+                                <Grid>
+                                    <ImageButton Aspect="Fill" Source="{Binding Type, Converter={StaticResource MapTileImageConverter}}" Command="{Binding Source={RelativeSource AncestorType={x:Type local:MapViewModel}}, Path=OpenInfosCasePopupCommand}" CommandParameter="{Binding}" BackgroundColor="Transparent"/>
+                                    <Label Text="{Binding Owner}" TextColor="{Binding IsActifVillage, Converter={StaticResource MapTileOwnerColorConverter}}" FontSize="13" VerticalOptions="End" HorizontalOptions="Center" IsVisible="{Binding Type, Converter={StaticResource MapTileOwnerExistConverter}}"></Label>
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+
+            </Grid>
+
+        </ScrollView>
+
+
+        <StackLayout AbsoluteLayout.LayoutBounds="0.98,0.04,330,150" AbsoluteLayout.LayoutFlags="PositionProportional">
+            <Border Stroke="Black" StrokeThickness="2" BackgroundColor="#555555" StrokeShape="RoundRectangle 30" Padding="10" HorizontalOptions="End" VerticalOptions="Center">
+                <Label HorizontalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{Binding NSoldatsDispo}" TextColor="White" FontAttributes="Bold" FontSize="{OnPlatform Android=9, iOS=9, WinUI=12}" />
+                            <Span Text=" soldats sont prêt à combattre dans votre village." TextColor="White" FontAttributes="Bold" FontSize="{OnPlatform Android=9, iOS=9, WinUI=12}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Border>
+        </StackLayout>
+        
+        
+        <StackLayout BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0.5,0.98,200,70" AbsoluteLayout.LayoutFlags="PositionProportional">
+            <Button Text="Entrer dans mon Village" Command="{Binding EnterInMyVillageCommand}" />
+        </StackLayout>
+
+
+        <Grid AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Black" Opacity="0.5"  IsVisible="{Binding IsLoading}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <ActivityIndicator IsRunning="True" VerticalOptions="Center" HorizontalOptions="Center" Color="White"/>
+        </Grid>
+
+    </AbsoluteLayout>
+
+
+
+
+
+</ContentPage>
