@@ -1,14 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\oem\\Documents\\WarPath-Game\\Warpath-frontend\\",
+  "WorkspaceRootPath": "C:\\Users\\oem\\Documents\\test\\Warpath-frontend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7893B133-0909-4AE0-B470-2B82E26FC72A}|Warpath-frontend\\Warpath-frontend.csproj|c:\\users\\oem\\documents\\warpath-game\\warpath-frontend\\warpath-frontend\\services\\signalrservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7893B133-0909-4AE0-B470-2B82E26FC72A}|Warpath-frontend\\Warpath-frontend.csproj|solutionrelative:warpath-frontend\\services\\signalrservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7893B133-0909-4AE0-B470-2B82E26FC72A}|Warpath-frontend\\Warpath-frontend.csproj|c:\\users\\oem\\documents\\warpath-game\\warpath-frontend\\warpath-frontend\\services\\api\\baseapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7893B133-0909-4AE0-B470-2B82E26FC72A}|Warpath-frontend\\Warpath-frontend.csproj|solutionrelative:warpath-frontend\\services\\api\\baseapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7893B133-0909-4AE0-B470-2B82E26FC72A}|Warpath-frontend\\Warpath-frontend.csproj|c:\\users\\oem\\documents\\test\\warpath-frontend\\warpath-frontend\\warpath-frontend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7893B133-0909-4AE0-B470-2B82E26FC72A}|Warpath-frontend\\Warpath-frontend.csproj|solutionrelative:warpath-frontend\\warpath-frontend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,37 +14,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SignalRService.cs",
-              "DocumentMoniker": "C:\\Users\\oem\\Documents\\WarPath-Game\\Warpath-frontend\\Warpath-frontend\\Services\\SignalRService.cs",
-              "RelativeDocumentMoniker": "Warpath-frontend\\Services\\SignalRService.cs",
-              "ToolTip": "C:\\Users\\oem\\Documents\\WarPath-Game\\Warpath-frontend\\Warpath-frontend\\Services\\SignalRService.cs",
-              "RelativeToolTip": "Warpath-frontend\\Services\\SignalRService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T09:41:41.212Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BaseApiService.cs",
-              "DocumentMoniker": "C:\\Users\\oem\\Documents\\WarPath-Game\\Warpath-frontend\\Warpath-frontend\\Services\\Api\\BaseApiService.cs",
-              "RelativeDocumentMoniker": "Warpath-frontend\\Services\\Api\\BaseApiService.cs",
-              "ToolTip": "C:\\Users\\oem\\Documents\\WarPath-Game\\Warpath-frontend\\Warpath-frontend\\Services\\Api\\BaseApiService.cs",
-              "RelativeToolTip": "Warpath-frontend\\Services\\Api\\BaseApiService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T09:41:17.84Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Warpath-frontend.csproj",
+              "DocumentMoniker": "C:\\Users\\oem\\Documents\\test\\Warpath-frontend\\Warpath-frontend\\Warpath-frontend.csproj",
+              "RelativeDocumentMoniker": "Warpath-frontend\\Warpath-frontend.csproj",
+              "ToolTip": "C:\\Users\\oem\\Documents\\test\\Warpath-frontend\\Warpath-frontend\\Warpath-frontend.csproj",
+              "RelativeToolTip": "Warpath-frontend\\Warpath-frontend.csproj",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAAHoAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-31T14:38:23.467Z",
+              "EditorCaption": ""
             }
           ]
         }
